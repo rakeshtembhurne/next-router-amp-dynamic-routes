@@ -1,10 +1,12 @@
 import { useRouter } from "next/router"
 
-export const config = { amp: 'hybrid'}
+export const config = { amp: true}
 
 export default function Home() {
     const router = useRouter();
+    
     const { asPath, pathname, route, query } = router;
+    console.log({ asPath, pathname, route, query });
 
     return (<>
         <h1>Output</h1>
